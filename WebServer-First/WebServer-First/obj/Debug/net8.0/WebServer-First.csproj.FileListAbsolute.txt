@@ -1,0 +1,15 @@
+C:\Users\HP\source\repos\WebServer\WebServer-First\WebServer-First\bin\Debug\net8.0\WebServer-First.exe
+C:\Users\HP\source\repos\WebServer\WebServer-First\WebServer-First\bin\Debug\net8.0\WebServer-First.deps.json
+C:\Users\HP\source\repos\WebServer\WebServer-First\WebServer-First\bin\Debug\net8.0\WebServer-First.runtimeconfig.json
+C:\Users\HP\source\repos\WebServer\WebServer-First\WebServer-First\bin\Debug\net8.0\WebServer-First.dll
+C:\Users\HP\source\repos\WebServer\WebServer-First\WebServer-First\bin\Debug\net8.0\WebServer-First.pdb
+C:\Users\HP\source\repos\WebServer\WebServer-First\WebServer-First\obj\Debug\net8.0\WebServer-First.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\source\repos\WebServer\WebServer-First\WebServer-First\obj\Debug\net8.0\WebServer-First.AssemblyInfoInputs.cache
+C:\Users\HP\source\repos\WebServer\WebServer-First\WebServer-First\obj\Debug\net8.0\WebServer-First.AssemblyInfo.cs
+C:\Users\HP\source\repos\WebServer\WebServer-First\WebServer-First\obj\Debug\net8.0\WebServer-First.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\WebServer\WebServer-First\WebServer-First\obj\Debug\net8.0\WebServer-First.sourcelink.json
+C:\Users\HP\source\repos\WebServer\WebServer-First\WebServer-First\obj\Debug\net8.0\WebServer-First.dll
+C:\Users\HP\source\repos\WebServer\WebServer-First\WebServer-First\obj\Debug\net8.0\refint\WebServer-First.dll
+C:\Users\HP\source\repos\WebServer\WebServer-First\WebServer-First\obj\Debug\net8.0\WebServer-First.pdb
+C:\Users\HP\source\repos\WebServer\WebServer-First\WebServer-First\obj\Debug\net8.0\WebServer-First.genruntimeconfig.cache
+C:\Users\HP\source\repos\WebServer\WebServer-First\WebServer-First\obj\Debug\net8.0\ref\WebServer-First.dll

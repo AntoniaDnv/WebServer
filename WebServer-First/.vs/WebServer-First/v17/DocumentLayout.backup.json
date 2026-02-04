@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\HP\\source\\repos\\WebServer\\WebServer-First\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4821D6D5-D47E-486C-A09C-408AB04D01B0}|WebServer-First.Server\\WebServer-First.Server.csproj|c:\\users\\hp\\source\\repos\\webserver\\webserver-first\\webserver-first.server\\http\\request.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4821D6D5-D47E-486C-A09C-408AB04D01B0}|WebServer-First.Server\\WebServer-First.Server.csproj|solutionrelative:webserver-first.server\\http\\request.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4821D6D5-D47E-486C-A09C-408AB04D01B0}|WebServer-First.Server\\WebServer-First.Server.csproj|c:\\users\\hp\\source\\repos\\webserver\\webserver-first\\webserver-first.server\\http\\method.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4821D6D5-D47E-486C-A09C-408AB04D01B0}|WebServer-First.Server\\WebServer-First.Server.csproj|solutionrelative:webserver-first.server\\http\\method.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4821D6D5-D47E-486C-A09C-408AB04D01B0}|WebServer-First.Server\\WebServer-First.Server.csproj|c:\\users\\hp\\source\\repos\\webserver\\webserver-first\\webserver-first.server\\http\\response.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4821D6D5-D47E-486C-A09C-408AB04D01B0}|WebServer-First.Server\\WebServer-First.Server.csproj|solutionrelative:webserver-first.server\\http\\response.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -43,6 +51,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Request.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\WebServer\\WebServer-First\\WebServer-First.Server\\HTTP\\Request.cs",
+              "RelativeDocumentMoniker": "WebServer-First.Server\\HTTP\\Request.cs",
+              "ToolTip": "C:\\Users\\HP\\source\\repos\\WebServer\\WebServer-First\\WebServer-First.Server\\HTTP\\Request.cs",
+              "RelativeToolTip": "WebServer-First.Server\\HTTP\\Request.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAqwCsAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-04T13:36:18.477Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Method.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\WebServer\\WebServer-First\\WebServer-First.Server\\HTTP\\Method.cs",
+              "RelativeDocumentMoniker": "WebServer-First.Server\\HTTP\\Method.cs",
+              "ToolTip": "C:\\Users\\HP\\source\\repos\\WebServer\\WebServer-First\\WebServer-First.Server\\HTTP\\Method.cs",
+              "RelativeToolTip": "WebServer-First.Server\\HTTP\\Method.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-04T13:35:24.783Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Response.cs",
               "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\WebServer\\WebServer-First\\WebServer-First.Server\\HTTP\\Response.cs",
               "RelativeDocumentMoniker": "WebServer-First.Server\\HTTP\\Response.cs",
@@ -55,7 +89,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "HeaderCollection.cs",
               "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\WebServer\\WebServer-First\\WebServer-First.Server\\HTTP\\HeaderCollection.cs",
               "RelativeDocumentMoniker": "WebServer-First.Server\\HTTP\\HeaderCollection.cs",
@@ -63,16 +97,11 @@
               "RelativeToolTip": "WebServer-First.Server\\HTTP\\HeaderCollection.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-03T18:51:51.645Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "WhenOpened": "2026-02-03T18:51:51.645Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Header.cs",
               "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\WebServer\\WebServer-First\\WebServer-First.Server\\HTTP\\Header.cs",
               "RelativeDocumentMoniker": "WebServer-First.Server\\HTTP\\Header.cs",
@@ -80,12 +109,11 @@
               "RelativeToolTip": "WebServer-First.Server\\HTTP\\Header.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-03T10:21:45.681Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-03T10:21:45.681Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "StatusCode.cs",
               "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\WebServer\\WebServer-First\\WebServer-First.Server\\HTTP\\StatusCode.cs",
               "RelativeDocumentMoniker": "WebServer-First.Server\\HTTP\\StatusCode.cs",
@@ -93,12 +121,11 @@
               "RelativeToolTip": "WebServer-First.Server\\HTTP\\StatusCode.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-03T10:21:23.938Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-03T10:21:23.938Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\WebServer\\WebServer-First\\WebServer-First.Demo\\Program.cs",
               "RelativeDocumentMoniker": "WebServer-First.Demo\\Program.cs",
@@ -106,12 +133,11 @@
               "RelativeToolTip": "WebServer-First.Demo\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-03T10:13:37.941Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-03T10:13:37.941Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\WebServer\\WebServer-First\\WebServer-First.Server\\Class1.cs",
               "RelativeDocumentMoniker": "WebServer-First.Server\\Class1.cs",
@@ -119,8 +145,7 @@
               "RelativeToolTip": "WebServer-First.Server\\Class1.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAQwB0AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-03T10:00:27.455Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-03T10:00:27.455Z"
             }
           ]
         }

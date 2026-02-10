@@ -8,11 +8,11 @@ namespace WebServer_First.Server.HTTP
 {
     public class Request
     {
-        public Method Method { get; set; }
-        public string Url { get; set; }
-        public HeaderCollection Headers { get; set; }
+        public Method Method { get;private set; }
+        public string Url { get; private set; }
+        public HeaderCollection Headers { get; private set; } = new HeaderCollection();
 
-        public string Body { get; set; }
+        public string Body { get; private set; }
 
         public static Request Parse(string request)
         {
@@ -20,7 +20,18 @@ namespace WebServer_First.Server.HTTP
             var startLine = lines.First().Split(" ");
             var method = ParseMethod(startLine[0]);
             var url = startLine[1];
+            var headers = ParseHeadres(lines.Skip(1));
+            var bodyLines = lines.Skip(headers.Count + 2).ToArray();
+            var body = string.Join("\r\n", bodyLines);
+           
+            return new Request
+            {
+                Method = method,
+                Url = url,
+                Headers = headers,
+                Body = body
 
+            };
 
         }
 
@@ -31,21 +42,12 @@ namespace WebServer_First.Server.HTTP
                 return (Method)Enum.Parse(typeof(Method), method, true);
 
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 throw new InvalidOperationException($"Method '{method}' is not supported");
             }
-            var headers = ParseHeadres(lines.Skip(1));
-            var bodyLines = bodyLines.Skip(headers.Count + 2).ToArray();
-            var body = string.Join("\r\n", bodyLines);
-            return new Request
-            {
-                Method = method,
-                Url = url,
-                Headers = headers,
-                Body = bodyLines
-
-            };
+        
+           
         }
         private static HeaderCollection ParseHeadres(IEnumerable<string> headerLines)
         {

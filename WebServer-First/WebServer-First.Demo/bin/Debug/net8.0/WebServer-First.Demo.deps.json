@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "WebServer-First.Demo/1.0.0": {
+        "dependencies": {
+          "WebServer-First.Server": "1.0.0"
+        },
+        "runtime": {
+          "WebServer-First.Demo.dll": {}
+        }
+      },
+      "WebServer-First.Server/1.0.0": {
+        "runtime": {
+          "WebServer-First.Server.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "WebServer-First.Demo/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WebServer-First.Server/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

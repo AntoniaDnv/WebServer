@@ -60,7 +60,7 @@ namespace WebServer_First.Server.HTTP
         {
             var requestMethod = request.Method;
             var requestUrl = request.Url;
-            if (!routes.ContainsKey(requestMethod)== false || !routes[requestMethod].ContainsKey(requestUrl) == false)
+            if (routes.ContainsKey(requestMethod)== false || routes[requestMethod].ContainsKey(requestUrl) == false)
             {
                 return new NotFoundResponse();
             }

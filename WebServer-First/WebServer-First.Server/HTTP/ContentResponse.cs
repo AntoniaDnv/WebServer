@@ -10,12 +10,14 @@ namespace WebServer_First.Server.HTTP
 {
     public class ContentResponse :Response
     {
-        public ContentResponse(string content, string contentType)
+        public ContentResponse(string content, string contentType,
+            Action<Request, Response> preRenderAction)
             :base(StatusCode.OK)
         {
             Guard.AgainstNull(content);
             Guard.AgainstNull(contentType);
             Headers.Add(Header.ContentType, contentType);
+            PreRenderAction = preRenderAction;
             Body = content;
         }
 

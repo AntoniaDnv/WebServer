@@ -18,12 +18,27 @@ namespace WebServer_First.Server.HTTP
         {
             var header = new Header(name, value);
 
-            this.headers.Add(name, header);
+            headers[name] = header;
+        }
+        public string this [string name]
+        {
+            get
+            {
+                return headers[name].Value;
+            }
+            set
+            {
+                headers[name].Value = value;
+            }
+        }
+        public bool Contains(string name)
+        {
+            return headers.ContainsKey(name);
         }
 
         public IEnumerator<Header> GetEnumerator()
         {
-            throw new NotImplementedException();
+            return headers.Values.GetEnumerator();
         }
 
         IEnumerator IEnumerable.GetEnumerator()

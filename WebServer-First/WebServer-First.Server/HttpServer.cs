@@ -51,6 +51,10 @@ namespace WebServer_First.Server
                var response =  routes.MatchRequest(request);
                //string content = "Hello from the server!";
                 WriteResponse(networkStream, response);
+                if(response.PreRenderAction != null)
+                {
+                    response.PreRenderAction(request, response);
+                }
                //connection.Close();
             }
         }
@@ -76,7 +80,8 @@ namespace WebServer_First.Server
                 {
                     throw new InvalidOperationException("Request is too large.");
                 }
-                requestBuilder.Append(Encoding.UTF8.GetString(buffer, 0, bytesRead));
+                string temp = Encoding.UTF8.GetString(buffer, 0, bytesRead);
+                requestBuilder.Append(temp);
 
             }
             while (networkStream.DataAvailable);

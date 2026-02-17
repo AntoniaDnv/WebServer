@@ -11,6 +11,8 @@ namespace WebServer_First.Server.HTTP
         public static string PlainText = "text/plain charset=UTF-8";
 
         public static string Html = "text/html charset=UTF-8";
+        public static string FormUrlEncoded = "application/x-www-form-urlencoded"; //need to finish 
+
 
     }
 }

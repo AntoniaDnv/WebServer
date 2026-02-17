@@ -11,8 +11,8 @@ namespace WebServer_First.Server.Responses
 {
     public class TextResponse:ContentResponse
     {
-        public TextResponse(string text)
-            :base(text, ContentType.PlainText)
+        public TextResponse(string text, Action<Request, Response> preRenderAction = null)
+            :base(text, ContentType.PlainText, preRenderAction)
         {
             
         }

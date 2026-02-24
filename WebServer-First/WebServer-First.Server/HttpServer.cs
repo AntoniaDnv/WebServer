@@ -58,7 +58,8 @@ namespace WebServer_First.Server
                     {
                         response.PreRenderAction(request, response);
                     }
-                    connection.Close();
+                    WriteResponse(networkStream, response);
+                        connection.Close();
                 });
             }
         }

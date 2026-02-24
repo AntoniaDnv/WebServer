@@ -14,17 +14,19 @@ namespace WebServer_First.Demo
              x.MapGet("/html", new HtmlResponse("<h1 style=\"color:blue;\">Hello from my tml response</h1>"))
              .MapGet("/", new TextResponse("Hello from my server, now with routing table!!!"))
              .MapGet("/redirect", new RedirectResponse("https://github.com/"))
-             .MapGet("/login", new HtmlResponse(Form.Html))w
+             .MapGet("/login", new HtmlResponse(Form.Html))
              .MapGet("/HTML", new TextResponse("", Program.AddFormDataAction))
              .MapPost("./")
             );
             server.Start();
         }
-        private static AddFormDataAction(Request request, Response response)
+        private static void AddFormDataAction(Request request, Response response)
         {
             response.Body = "";
-            foreach (var (key, value) )
+            foreach (var (key, value) in request.FormData ) //Form not Form data?
             {
+                response.Body += $"{key} -  {value}";
+                response.Body += Environment.NewLine;
             }
         }
     }

@@ -7,14 +7,6 @@
       "RelativeMoniker": "D:0:0:{DCB84FF1-AD23-4760-8933-22C2D86C8560}|WebServer-First.Demo\\WebServer-First.Demo.csproj|solutionrelative:webserver-first.demo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4821D6D5-D47E-486C-A09C-408AB04D01B0}|WebServer-First.Server\\WebServer-First.Server.csproj|c:\\users\\hp\\source\\repos\\webserver\\webserver-first\\webserver-first.server\\responses\\textfileresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4821D6D5-D47E-486C-A09C-408AB04D01B0}|WebServer-First.Server\\WebServer-First.Server.csproj|solutionrelative:webserver-first.server\\responses\\textfileresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4821D6D5-D47E-486C-A09C-408AB04D01B0}|WebServer-First.Server\\WebServer-First.Server.csproj|c:\\users\\hp\\source\\repos\\webserver\\webserver-first\\webserver-first.server\\http\\header.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4821D6D5-D47E-486C-A09C-408AB04D01B0}|WebServer-First.Server\\WebServer-First.Server.csproj|solutionrelative:webserver-first.server\\http\\header.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4821D6D5-D47E-486C-A09C-408AB04D01B0}|WebServer-First.Server\\WebServer-First.Server.csproj|c:\\users\\hp\\source\\repos\\webserver\\webserver-first\\webserver-first.server\\httpserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4821D6D5-D47E-486C-A09C-408AB04D01B0}|WebServer-First.Server\\WebServer-First.Server.csproj|solutionrelative:webserver-first.server\\httpserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -23,12 +15,20 @@
       "RelativeMoniker": "D:0:0:{4821D6D5-D47E-486C-A09C-408AB04D01B0}|WebServer-First.Server\\WebServer-First.Server.csproj|solutionrelative:webserver-first.server\\responses\\textresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4821D6D5-D47E-486C-A09C-408AB04D01B0}|WebServer-First.Server\\WebServer-First.Server.csproj|c:\\users\\hp\\source\\repos\\webserver\\webserver-first\\webserver-first.server\\http\\contentresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4821D6D5-D47E-486C-A09C-408AB04D01B0}|WebServer-First.Server\\WebServer-First.Server.csproj|solutionrelative:webserver-first.server\\http\\contentresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4821D6D5-D47E-486C-A09C-408AB04D01B0}|WebServer-First.Server\\WebServer-First.Server.csproj|c:\\users\\hp\\source\\repos\\webserver\\webserver-first\\webserver-first.server\\responses\\response.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4821D6D5-D47E-486C-A09C-408AB04D01B0}|WebServer-First.Server\\WebServer-First.Server.csproj|solutionrelative:webserver-first.server\\responses\\response.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4821D6D5-D47E-486C-A09C-408AB04D01B0}|WebServer-First.Server\\WebServer-First.Server.csproj|c:\\users\\hp\\source\\repos\\webserver\\webserver-first\\webserver-first.server\\responses\\textfileresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4821D6D5-D47E-486C-A09C-408AB04D01B0}|WebServer-First.Server\\WebServer-First.Server.csproj|solutionrelative:webserver-first.server\\responses\\textfileresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4821D6D5-D47E-486C-A09C-408AB04D01B0}|WebServer-First.Server\\WebServer-First.Server.csproj|c:\\users\\hp\\source\\repos\\webserver\\webserver-first\\webserver-first.server\\http\\header.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4821D6D5-D47E-486C-A09C-408AB04D01B0}|WebServer-First.Server\\WebServer-First.Server.csproj|solutionrelative:webserver-first.server\\http\\header.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4821D6D5-D47E-486C-A09C-408AB04D01B0}|WebServer-First.Server\\WebServer-First.Server.csproj|c:\\users\\hp\\source\\repos\\webserver\\webserver-first\\webserver-first.server\\http\\contentresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4821D6D5-D47E-486C-A09C-408AB04D01B0}|WebServer-First.Server\\WebServer-First.Server.csproj|solutionrelative:webserver-first.server\\http\\contentresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4821D6D5-D47E-486C-A09C-408AB04D01B0}|WebServer-First.Server\\WebServer-First.Server.csproj|c:\\users\\hp\\source\\repos\\webserver\\webserver-first\\webserver-first.server\\http\\request.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -106,7 +106,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "TextFileResponse.cs",
               "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\WebServer\\WebServer-First\\WebServer-First.Server\\Responses\\TextFileResponse.cs",
               "RelativeDocumentMoniker": "WebServer-First.Server\\Responses\\TextFileResponse.cs",
@@ -114,18 +114,17 @@
               "RelativeToolTip": "WebServer-First.Server\\Responses\\TextFileResponse.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAAABkAAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-24T09:17:26.481Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-24T09:17:26.481Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "HttpServer.cs",
               "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\WebServer\\WebServer-First\\WebServer-First.Server\\HttpServer.cs",
               "RelativeDocumentMoniker": "WebServer-First.Server\\HttpServer.cs",
               "ToolTip": "C:\\Users\\HP\\source\\repos\\WebServer\\WebServer-First\\WebServer-First.Server\\HttpServer.cs",
               "RelativeToolTip": "WebServer-First.Server\\HttpServer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAowDwAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADwAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-03T10:00:27.455Z",
               "EditorCaption": ""
@@ -138,7 +137,7 @@
               "RelativeDocumentMoniker": "WebServer-First.Demo\\Program.cs",
               "ToolTip": "C:\\Users\\HP\\source\\repos\\WebServer\\WebServer-First\\WebServer-First.Demo\\Program.cs",
               "RelativeToolTip": "WebServer-First.Demo\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-03T10:13:37.941Z",
               "EditorCaption": ""
@@ -181,19 +180,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "Response.cs",
               "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\WebServer\\WebServer-First\\WebServer-First.Server\\Responses\\Response.cs",
               "RelativeDocumentMoniker": "WebServer-First.Server\\Responses\\Response.cs",
               "ToolTip": "C:\\Users\\HP\\source\\repos\\WebServer\\WebServer-First\\WebServer-First.Server\\Responses\\Response.cs",
               "RelativeToolTip": "WebServer-First.Server\\Responses\\Response.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAIwBUAAABKAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAcwBUAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-03T18:55:46.419Z"
+              "WhenOpened": "2026-02-03T18:55:46.419Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "TextResponse.cs",
               "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\WebServer\\WebServer-First\\WebServer-First.Server\\Responses\\TextResponse.cs",
               "RelativeDocumentMoniker": "WebServer-First.Server\\Responses\\TextResponse.cs",
@@ -201,7 +201,8 @@
               "RelativeToolTip": "WebServer-First.Server\\Responses\\TextResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-10T08:39:30.825Z"
+              "WhenOpened": "2026-02-10T08:39:30.825Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -217,7 +218,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Header.cs",
               "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\WebServer\\WebServer-First\\WebServer-First.Server\\HTTP\\Header.cs",
               "RelativeDocumentMoniker": "WebServer-First.Server\\HTTP\\Header.cs",
@@ -225,12 +226,11 @@
               "RelativeToolTip": "WebServer-First.Server\\HTTP\\Header.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAuwA0AAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-03T10:21:45.681Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-03T10:21:45.681Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "ContentResponse.cs",
               "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\WebServer\\WebServer-First\\WebServer-First.Server\\HTTP\\ContentResponse.cs",
               "RelativeDocumentMoniker": "WebServer-First.Server\\HTTP\\ContentResponse.cs",

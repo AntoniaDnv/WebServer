@@ -7,21 +7,23 @@ namespace WebServer_First.Demo
 {
     internal class Program
     {
-        static void Main(string[] args)
+        private static const string Downloadform
+        static async Task Main(string[] args)
         {
             var server = new HttpServer(x =>
              x.MapGet("/html", new HtmlResponse("<h1 style=\"color:blue;\">Hello from my tml response</h1>"))
              .MapGet("/", new TextResponse("Hello from my server, now with routing table!!!"))
              .MapGet("/redirect", new RedirectResponse("https://github.com/"))
-             .MapGet("/login", new HtmlResponse(Form.Html))
+             .MapGet("/login", new HtmlResponse(Form.Html))w
              .MapGet("/HTML", new TextResponse("", Program.AddFormDataAction))
+             .MapPost("./")
             );
             server.Start();
         }
         private static AddFormDataAction(Request request, Response response)
         {
             response.Body = "";
-            foreach (var item in response.Headers)
+            foreach (var (key, value) )
             {
             }
         }

@@ -1,6 +1,7 @@
 ﻿using System.Net;
 using System.Net.Sockets;
 using System.Text;
+using System.Threading.Tasks;
 using WebServer_First.Server.Contracts;
 using WebServer_First.Server.HTTP;
 using WebServer_First.Server.Responses;
@@ -35,37 +36,40 @@ namespace WebServer_First.Server
         {
             
         }
-        public void Start()
+        public async Task Start()
         {
             serverListener.Start();
             Console.WriteLine("Srever started");
             Console.WriteLine($"Listening on port: {port}");
             while (true)
             {
-                var connection = serverListener.AcceptTcpClient();
-                var networkStream = connection.GetStream();
-                var requestText = this.ReadRequest(networkStream);
-                Console.WriteLine(requestText);
-
-                var request = Request.Parse(requestText);
-               var response =  routes.MatchRequest(request);
-               //string content = "Hello from the server!";
-                WriteResponse(networkStream, response);
-                if(response.PreRenderAction != null)
+                var connection = await serverListener.AcceptTcpClientAsync();
+                _ = Task.Run(async () =>
                 {
-                    response.PreRenderAction(request, response);
-                }
-               //connection.Close();
+                    var networkStream = connection.GetStream();
+                    var requestText = await ReadRequest(networkStream);
+                    Console.WriteLine(requestText);
+
+                    var request = Request.Parse(requestText);
+                    var response = routes.MatchRequest(request);
+                    //string content = "Hello from the server!";
+                    await WriteResponse(networkStream, response);
+                    if (response.PreRenderAction != null)
+                    {
+                        response.PreRenderAction(request, response);
+                    }
+                    connection.Close();
+                });
             }
         }
 
-        private void WriteResponse(NetworkStream networkStream, Response response)
+        private async Task WriteResponse(NetworkStream networkStream, Response response)
         {
            var responseBytes = Encoding.UTF8.GetBytes(response.ToString());
-            networkStream.Write(responseBytes);     
+           await networkStream.WriteAsync(responseBytes);     
         }
 
-        private string ReadRequest(NetworkStream networkStream)
+        private async Task<string> ReadRequest(NetworkStream networkStream)
         {
             var bufferLength = 1024;
             var buffer = new byte[bufferLength];
@@ -74,7 +78,7 @@ namespace WebServer_First.Server
             var requestBuilder = new StringBuilder();
             do
             {
-                var bytesRead = networkStream.Read(buffer, 0, bufferLength);
+                var bytesRead = await networkStream.ReadAsync(buffer, 0, bufferLength);
                 totalBytes += bytesRead;
                 if(totalBytes> 10 * 1024)
                 {

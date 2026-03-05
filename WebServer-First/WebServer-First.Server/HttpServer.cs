@@ -53,13 +53,13 @@ namespace WebServer_First.Server
                     var request = Request.Parse(requestText);
                     var response = routes.MatchRequest(request);
                     //string content = "Hello from the server!";
-                    await WriteResponse(networkStream, response);
+                    
                     if (response.PreRenderAction != null)
                     {
                         response.PreRenderAction(request, response);
                     }
-                    WriteResponse(networkStream, response);
-                        connection.Close();
+                    await WriteResponse(networkStream, response);
+                    connection.Close();
                 });
             }
         }

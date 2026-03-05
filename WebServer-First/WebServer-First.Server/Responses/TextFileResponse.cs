@@ -12,18 +12,20 @@ namespace WebServer_First.Server.Responses
         public TextFileResponse(string filename)
             : base(HTTP.StatusCode.OK)
         {
-            Filename = filename;
+            FileName = filename;
             Headers.Add(Header.ContentType, ContentType.PlainText);
         }
 
-        public string Filename { get; }
+        public string FileName { get; }
 
         public override string ToString()
         {
-            if (File.Exists(Filename))
+            if (File.Exists(FileName))
             {
-                Body = File.ReadAllText(Filename);
-                Headers.Add(Header.ContentDisposition, $"attachment; filename=\"{Filename}\"");
+                Body = File.ReadAllTextAsync(FileName).Result;
+                var fileBytesCount = new FileInfo(this.FileName).Length;
+                Headers.Add(Header.ContentLength, fileBytesCount.ToString());
+                Headers.Add(Header.ContentDisposition, $"attachment; filename=\"{FileName}\"");
             }
             return base.ToString();
         }

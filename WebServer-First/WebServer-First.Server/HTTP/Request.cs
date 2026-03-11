@@ -12,7 +12,7 @@ namespace WebServer_First.Server.HTTP
         public Method Method { get;private set; }
         public string Url { get; private set; }
         public HeaderCollection Headers { get; private set; } = new HeaderCollection();
-
+        public CookieCollection Cookies { get; private set; }   
         public string Body { get; private set; }
         public IReadOnlyDictionary<string, string> FormData { get; private set; }
         public static Request Parse(string request)
@@ -22,6 +22,7 @@ namespace WebServer_First.Server.HTTP
             var method = ParseMethod(startLine[0]);
             var url = startLine[1];
             var headers = ParseHeadres(lines.Skip(1));
+            var cookies = ParseCookies(headers);
             var bodyLines = lines.Skip(headers.Count + 2).ToArray();
             var body = string.Join("\r\n", bodyLines);
 
@@ -31,8 +32,9 @@ namespace WebServer_First.Server.HTTP
                 Method = method,
                 Url = url,
                 Headers = headers,
+                Cookies = cookies,
                 Body = body,
-                Form = form 
+                FormData = form 
 
             };
 
@@ -99,6 +101,23 @@ namespace WebServer_First.Server.HTTP
                   part => part[1],
                 StringComparer.InvariantCultureIgnoreCase);
         }
+        private static CookieCollection ParseCookies(HeaderCollection headers)
+        {
+            var cookies = new CookieCollection();
+            if (headers.Contains(Header.Cookie))
+            {
+                var cookieHeader = headers[Header.Cookie];
+                var allCookies = cookieHeader.Split(';');
 
+                foreach(var cookieText in allCookies)
+                {
+                    var cookieParts = cookieText.Split("=");
+                    var cookieName = cookieParts[0].Trim();
+                    var cookieValue = cookieParts[1].Trim();
+                    cookies.Add(cookieName, cookieValue);
+                }   
+            }
+            return cookies;
+        }
     }
 }

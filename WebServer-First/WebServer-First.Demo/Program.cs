@@ -9,7 +9,15 @@ namespace WebServer_First.Demo
 {
     internal class Program
     {
-        
+        private const string Username = "user";
+        private const string Password = "user123";
+
+        private const string LoginForm =
+            @"<form action='/Login' method='POST'>
+        Username: <input type='text' name='Username'/>
+        Password: <input type='text' name='Password'/>
+        <input type='submit' value='Log In' />
+    </form>";
         private const string DownloadForm = @"<form action = '/Content' method='POST'>
  <input type='submit' value ='Download Sites Content' />
 </form>";
@@ -17,15 +25,20 @@ namespace WebServer_First.Demo
         static async Task Main(string[] args)
         {
             await DownloadSitesAsTextFile(Program.FileName, new string[] { "https://judge.softuni.org/", "https://judge.softuni.org/" });
-            var server =  new HttpServer(x =>
+            var server = new HttpServer(x =>
              x.MapGet("/html", new HtmlResponse("<h1 style=\"color:blue;\">Hello from my tml response</h1>"))
              .MapGet("/", new TextResponse("Hello from my server, now with routing table!!!"))
              .MapGet("/redirect", new RedirectResponse("https://github.com/"))
              .MapGet("/login", new HtmlResponse(Form.Html))
              .MapGet("/HTML", new TextResponse("", Program.AddFormDataAction))
              .MapPost("/Content", new HtmlResponse(Program.DownloadForm))
-             .MapGet("/Content", new TextFileResponse(Program.FileName))  
+             .MapGet("/Content", new TextFileResponse(Program.FileName))
              .MapGet("/Cookies", new HtmlResponse("", Program.AddCookiesAction))
+             .MapGet("/Session", new TextResponse("", Program.DisplaySessionInfoAction))
+             .MapGet("/Login", new HtmlResponse(Program.LoginForm))
+             .MapPost("/Login", new HtmlResponse("",Program.LoginAction))
+             .MapGet("/Logout", new HtmlResponse("",  Program.LogoutAction))
+             .MapGet("/UserProfile", new HtmlResponse ("", Program.GetUserDataAction)
 
             );
             server.Start();
@@ -33,7 +46,7 @@ namespace WebServer_First.Demo
         private static void AddFormDataAction(Request request, Response response)
         {
             response.Body = "";
-            foreach (var (key, value) in request.FormData ) //Form not Form data?
+            foreach (var (key, value) in request.FormData ) 
             {
                 response.Body += $"{key} -  {value}";
                 response.Body += Environment.NewLine;
@@ -96,15 +109,69 @@ namespace WebServer_First.Demo
         }
         private static void DisplaySessionInfoAction(Response response, Request request) 
         {
-            var sessionExit = request.Session
+            var sessionExists = request.Session
                 .ContainsKey(Session.SessionCurrentDataKey);
             var bodyText = "";
-            if (sessionExit) 
+            if (sessionExists) 
             {
                 var currentDate = request.Session[Session.SessionCurrentDataKey];
-                bodyTetx = 
+                bodyText = $"Stored date: {currentDate}!";
             
             }
+            else
+            {
+                bodyText = "Current date stored!";
+            }
+            response.Body = "";
+            response.Body += bodyText;
+        }
+        private static void  LoginAction(Request request, Response response)
+        {
+            request.Session.Clear();
+
+            var bodyText = "";
+            var usernameMatch = request.FormData["Username"] == Program.Username;
+                
+            var passwordMatch =  request.FormData["Password"] == Program.Password;
+
+            if (usernameMatch && passwordMatch)
+            {
+                request.Session[Session.SessionUserKey] = "MyUserId";
+                response.Cookies.Add(Session.SessionCookieName, request.Session.Id);
+                bodyText = "<h1>Logged in successfully!</h1>";
+            }
+            else
+            {
+                bodyText = Program.LoginForm;
+            }
+
+            response.Body = "";
+            response.Body += bodyText;
+        }
+
+        private static void LogoutAction(Request request, Response response)
+        {
+            request.Session.Clear();
+            response.Body = "";
+            response.Body += "<h1>Logged out successfully!</h1>";
+           
+        }
+
+        private static void GetUserDataAction(Request request, Response response)
+        {
+            if (request.Session.ContainsKey(Session.SessionUserKey))
+            {
+                response.Body = "";
+                response.Body += $"<h3>Currently logged in user" + $"is with username '{Username}' </h3>";
+                
+            }
+            else
+            {
+                response.Body = "";
+                response.Body += $"<h3> You should first log in" + $"-<a href='/Login>Login</a> </h3>";
+
+            }
+
         }
     }
 }

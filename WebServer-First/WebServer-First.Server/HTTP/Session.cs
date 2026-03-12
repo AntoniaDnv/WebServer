@@ -12,6 +12,7 @@ namespace WebServer_First.Server.HTTP
     {
         public const string SessionCookieName = "MyWebServerSID";
         public const string SessionCurrentDataKey = "CurrentDate";
+        public const string SessionUserKey = "AuthenticatedUserId";
 
         private Dictionary<string, string> data;
 
@@ -32,5 +33,6 @@ namespace WebServer_First.Server.HTTP
 
         public bool ContainsKey(string key) 
        => this.data.ContainsKey(key);
+        public void Clear() => this.data.Clear();
     }
 }

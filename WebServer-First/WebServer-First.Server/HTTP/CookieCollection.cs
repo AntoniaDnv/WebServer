@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,8 +16,9 @@ namespace WebServer_First.Server.HTTP
          this.cookies = new Dictionary<string, Cookie>();
         }
 
+       
         public string this[string name] => this.cookies[name].Value;
-
+        
         public void Add(string name, string value) => new Cookie(name, value);
         public bool Contains(string name)=> this.cookies.ContainsKey(name);
 

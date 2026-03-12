@@ -58,6 +58,7 @@ namespace WebServer_First.Server
                     {
                         response.PreRenderAction(request, response);
                     }
+                    AddSession(request, response);
                     await WriteResponse(networkStream, response);
                     connection.Close();
                 });
@@ -91,6 +92,20 @@ namespace WebServer_First.Server
             }
             while (networkStream.DataAvailable);
             return requestBuilder.ToString();
+        }
+        private static void AddSession(Request request, Response response) 
+        {
+            var sessionExits = request.Session
+                   .ContainsKey(Session.SessionCurrentDataKey);
+            if (!sessionExits) 
+            {
+                request.Session[Session.SessionCurrentDataKey]
+                    = DateTime.Now.ToString();
+                response.Cookies
+                    .Add(Session.SessionCookieName, request.Session.Id);
+
+
+            }
         }
 
     }

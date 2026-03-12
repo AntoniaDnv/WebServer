@@ -63,7 +63,7 @@ namespace WebServer_First.Demo
 
         private static void AddCookiesAction(Request request, Response response)
         {
-            var requestHasCookies = request.Cookies.Any();
+            var requestHasCookies = request.Cookies.Any(c => c.Name != Session.SessionCookieName);
             var bodyText = "";
 
             if (requestHasCookies) 
@@ -93,6 +93,18 @@ namespace WebServer_First.Demo
             
             }
 
+        }
+        private static void DisplaySessionInfoAction(Response response, Request request) 
+        {
+            var sessionExit = request.Session
+                .ContainsKey(Session.SessionCurrentDataKey);
+            var bodyText = "";
+            if (sessionExit) 
+            {
+                var currentDate = request.Session[Session.SessionCurrentDataKey];
+                bodyTetx = 
+            
+            }
         }
     }
 }

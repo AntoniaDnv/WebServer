@@ -13,8 +13,10 @@ namespace WebServer_First.Server.HTTP
         public string Url { get; private set; }
         public HeaderCollection Headers { get; private set; } = new HeaderCollection();
         public CookieCollection Cookies { get; private set; }   
+        public Session Session { get; private set; }
         public string Body { get; private set; }
         public IReadOnlyDictionary<string, string> FormData { get; private set; }
+        private static Dictionary<string, Session> Sessions = new();
         public static Request Parse(string request)
         {
             var lines = request.Split("\r\n");
@@ -23,6 +25,7 @@ namespace WebServer_First.Server.HTTP
             var url = startLine[1];
             var headers = ParseHeadres(lines.Skip(1));
             var cookies = ParseCookies(headers);
+            var session = GetSession(cookies);
             var bodyLines = lines.Skip(headers.Count + 2).ToArray();
             var body = string.Join("\r\n", bodyLines);
 
@@ -33,6 +36,7 @@ namespace WebServer_First.Server.HTTP
                 Url = url,
                 Headers = headers,
                 Cookies = cookies,
+                Session = session,
                 Body = body,
                 FormData = form 
 
@@ -118,6 +122,17 @@ namespace WebServer_First.Server.HTTP
                 }   
             }
             return cookies;
+        }
+        private static Session GetSession(CookieCollection cookies)
+        {
+            var sessionId = cookies.Contains(Session.SessionCookieName) ?
+                cookies[Session.SessionCookieName] :
+                Guid.NewGuid().ToString();
+            if (!Sessions.ContainsKey(sessionId))
+            {
+                Sessions[sessionId] = new Session(sessionId);
+            }
+            return Sessions[sessionId];
         }
     }
 }
